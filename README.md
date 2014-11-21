@@ -31,7 +31,7 @@ The quickhull algorithm for computing a convex hull utilizes a divide and conque
 To parellize this algorithm we made the searching much more parallelized for each point. Additinally, added concurrency for each of the subsets and therefore signifcantly reduced calculations. Each subset produced k + 1 subsets which ultimately benifited from being parallelized.
 
 ####Graph
-![G]()
+![G](https://raw.githubusercontent.com/bluejamesbond/Parallel-Convex-Hull/master/graphs/QuickHullAlgorithm.png)
 
 ###Gift Wrapping
 ####Algorithm Definition
@@ -55,7 +55,7 @@ The gift wrapping algorithm, also known as Jarvis march, is an algorithm defined
 To parallelize this algorithm, we utilized the `t` threads in two distinct ways. First, an `n` number of threads are given extrema's on the set of points. Extrema's are points on the north, east, south, and west most sides of the set of points. Once we find that are no more points that can be given to these `wrap threads`, we coin the remaining `m` threads as `search threads`. We then run the gift wrapping algorithm with each `wrap thread`. The `search threads` are then allotted to a specific `wrap thread` so as to optimize line 7-9 in the pseudocode in the previous section. The `search threads` terminate when they have completed searching through all of the set of points. The `wrap threads` terminate when they hit a point in their march that has already has been found to exist on the convex hull.
 
 ####Graph
-![G]()
+![G](https://raw.githubusercontent.com/bluejamesbond/Parallel-Convex-Hull/master/graphs/GiftWrappingAlgorithm.png)
 
 ###Graham Scan Serial
 ####Algorithm Definition
@@ -97,8 +97,6 @@ for i = 2 to N:
     M += 1
     swap points[M] with points[i]
 ```
-####Graph
-![G]()
 
 ###Graham Scan Parallelized (Forced)
 
@@ -106,7 +104,7 @@ for i = 2 to N:
 The Graham scan algorithm uses parallel HeavySort in order to optimize the sorting. Additional improvemets were made in the searching by breaking down the work into multiple threads. Unfortunately, the increased dependency between points on the convex hull made it virtually impossible to parallize even furthur. The biggest drawback with Graham scan is simply its depedency for loop.
 
 ####Graph
-![G]()
+![G](https://raw.githubusercontent.com/bluejamesbond/Parallel-Convex-Hull/master/graphs/GrahamScanParallelAlgorithm.png)
 
 ###Additional Experiments
 - Optimal Thread Finder: Wrote a class to find the optimal threads to use for searching
