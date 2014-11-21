@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ext">
+    <CLASSES>
+      <root url="file://C:/Program Files/Java/Java3D/1.5.2/lib/ext" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/Program Files/Java/Java3D/1.5.2/bin" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://C:/Program Files/Java/Java3D/1.5.2/lib/ext" recursive="false" />
+  </library>
+</component>
