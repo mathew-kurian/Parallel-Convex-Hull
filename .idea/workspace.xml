@@ -25,7 +25,7 @@
     <favorites_list name="Parallel Convex Hull" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3908397">
+    <splitter split-orientation="horizontal" split-proportion="0.8312977">
       <split-first>
         <leaf>
           <file leaf-file-name="Point2DCloud.java" pinned="false" current-in-tab="false">
@@ -38,11 +38,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ForkedMaxBottomLeft.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ForkedMaxBottomLeft.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/computation/common/concurrent/search/ForkedMaxBottomLeft.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7861507" vertical-offset="1628" max-vertical-offset="2610">
-                  <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="2610">
+                  <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -85,11 +85,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/computation/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1800">
-                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.2192691" vertical-offset="0" max-vertical-offset="1890">
+                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -149,7 +149,7 @@
           <file leaf-file-name="GrahamScanParallel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/computation/algo/GrahamScanParallel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.32160804" vertical-offset="610" max-vertical-offset="3720">
+                <state vertical-scroll-proportion="0.21447721" vertical-offset="610" max-vertical-offset="3720">
                   <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -207,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/com/computation/common/Point2DCloud.java" />
         <option value="$PROJECT_DIR$/src/com/computation/algo/GiftWrapping.java" />
         <option value="$PROJECT_DIR$/src/com/computation/algo/GrahamScanParallel.java" />
-        <option value="$PROJECT_DIR$/src/com/computation/Main.java" />
         <option value="$PROJECT_DIR$/src/com/computation/common/concurrent/search/ForkedMaxBottomLeft.java" />
+        <option value="$PROJECT_DIR$/src/com/computation/Main.java" />
       </list>
     </option>
   </component>
@@ -738,12 +738,12 @@
       <workItem from="1416519674172" duration="25736000" />
       <workItem from="1416548936220" duration="173000" />
       <workItem from="1416549754218" duration="1642000" />
-      <workItem from="1416552556634" duration="22000" />
+      <workItem from="1416552556634" duration="102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32449000" />
+    <option name="totallyTimeSpent" value="32529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1776" extended-state="6" />
@@ -752,7 +752,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288201" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288201" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1239,14 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/computation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1800">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="11080" max-vertical-offset="41910">
@@ -1259,7 +1251,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/computation/algo/GrahamScanParallel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32160804" vertical-offset="610" max-vertical-offset="3720">
+        <state vertical-scroll-proportion="0.21447721" vertical-offset="610" max-vertical-offset="3720">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1270,8 +1262,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/computation/common/concurrent/search/ForkedMaxBottomLeft.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7861507" vertical-offset="1628" max-vertical-offset="2610">
-          <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="2610">
+          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/computation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2192691" vertical-offset="0" max-vertical-offset="1890">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
