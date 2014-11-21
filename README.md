@@ -57,7 +57,7 @@ To parallelize this algorithm, we utilized the `t` threads in two distinct ways.
 ####Graph
 ![G]()
 
-###Graham Scan Raw Serial
+###Graham Scan Serial
 ####Algorithm Definition
 The Graham scan is an algorithm very similar to the giftwrapping algorithm except that the points are sorted in polar order with relation to the lowest and farthest left point. This way as we iterate through points creating edges that create right turns, we do not need to visit every point. Graham Scan, as the name implies, scans points starting from the point that creates the most obtuse angle with the origin point. The runtime is O(nlogn) because of the sorting algorithms needed.
 
@@ -100,7 +100,7 @@ for i = 2 to N:
 ####Graph
 ![G]()
 
-###Graham Scan Force Parallelized
+###Graham Scan Parallelized (Forced)
 
 ####Parallelizing Steps
 The Graham scan algorithm uses parallel HeavySort in order to optimize the sorting. Additional improvemets were made in the searching by breaking down the work into multiple threads. Unfortunately, the increased dependency between points on the convex hull made it virtually impossible to parallize even furthur. The biggest drawback with Graham scan is simply its depedency for loop.
