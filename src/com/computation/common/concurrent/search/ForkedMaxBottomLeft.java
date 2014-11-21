@@ -90,4 +90,3 @@ public class ForkedMaxBottomLeft extends ForkableSearch<Point2D, List<Point2D>> 
         }
     }
 }
-}
