@@ -20,7 +20,7 @@ public class Main {
         OptimalThreadCountFinder.DPI_SCALING =
                 Point2DCloud.DPI_SCALING = 2; /* Set display scaling */
 
-        final Point2DCloud point2DCloud = new Point2DCloud(1000, 1000, 1000, true);
+        final Point2DCloud point2DCloud = new Point2DCloud(1000 /* points */, 1000, 1000, true);
 
         point2DCloud.addTopButton("GiftWrapping", new Runnable() {
             @Override
