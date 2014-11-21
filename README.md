@@ -116,3 +116,4 @@ The Graham scan algorithm uses parallel HeavySort in order to optimize the sorti
 ###Additional Experiments
 - Optimal Thread Finder: Wrote a class to find the optimal threads to use for searching
 - 3D QuickHull: Unable to finish
+- [Statistical data for each algorithm](https://docs.google.com/spreadsheets/d/194ycZrs89LAr71O4CzBvHvgsPyVQ7BLPOOYpbMxZIoU/edit?usp=sharing)
