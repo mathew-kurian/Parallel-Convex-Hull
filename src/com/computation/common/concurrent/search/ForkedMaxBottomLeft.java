@@ -1,7 +1,6 @@
 package com.computation.common.concurrent.search;
 
 import com.computation.common.Point2D;
-import com.computation.common.Reference;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -83,12 +82,12 @@ public class ForkedMaxBottomLeft extends ForkableSearch<Point2D, List<Point2D>> 
             Point2D last = ref.get();
             if (last == null) {
                 ref.update(min);
-            } else {
-                if (comparePoints(last, min) > 0) {
-                    ref.update(min);
-                    ((Reference) ref).setIndex(minIndex);
-                }
+                ((Reference) ref).setIndex(minIndex);
+            } else if (comparePoints(last, min) > 0) {
+                ref.update(min);
+                ((Reference) ref).setIndex(minIndex);
             }
         }
     }
+}
 }
