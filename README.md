@@ -1,7 +1,10 @@
 #Parallel Convex Hull Term Project
 A EE379K (Multicore Computing) term project written by *Kapil Gowru, Mathew Kurian, and Ankit Tandon*. The project tackles the objective of parallelizing three convex hull algorithms: Quickhull, Gift Wrapping, and Graham Scan.
 
-##GUI Instructions
+##GUI
+![G](https://raw.githubusercontent.com/bluejamesbond/Parallel-Convex-Hull/master/misc/screenshot1.png)
+
+###Instructions
 When the project is run from `main()` you will see a GUI pop up with a blank space and options on the right. The options are listed below:
 - Points: Define the number of points you want on your set. *Remember to press populate once you change your points.*
 - Algorithm: Select any of the three algorithms (QuickHull, Gift Wrapping, and Graham Scan) explained below.
