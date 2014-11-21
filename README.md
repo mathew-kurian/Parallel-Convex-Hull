@@ -1,6 +1,10 @@
 #Parallel Convex Hull Term Project
 A EE379K (Multicore Computing) term project written by *Kapil Gowru, Mathew Kurian, and Ankit Tandon*. The project tackles the objective of parallelizing three convex hull algorithms: Quickhull, Gift Wrapping, and Graham Scan.
 
+##*License*
+*All source code (except HeavySort) - Copyright Kapil Gowru, Mathew Kurian, and Ankit Tandon*  
+*HeavySort - Copyright Ross Anderson*
+
 ##GUI
 ![G](https://raw.githubusercontent.com/bluejamesbond/Parallel-Convex-Hull/master/misc/screenshot1.png)
 
@@ -112,6 +116,3 @@ The Graham scan algorithm uses parallel HeavySort in order to optimize the sorti
 ###Additional Experiments
 - Optimal Thread Finder: Wrote a class to find the optimal threads to use for searching
 - 3D QuickHull: Unable to finish
-
-***All code was written and tested by Kapil Gowru, Mathew Kurian, and Ankit Tandon***  
-***Only one external class was used - HeavySort.java**
