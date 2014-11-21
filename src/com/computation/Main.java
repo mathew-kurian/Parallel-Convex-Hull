@@ -12,7 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
-    public final static int POINTS = 1000000;
+    public final static int POINTS = 1000;
     public final static boolean DEBUG = true;
 
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException,
@@ -21,9 +21,9 @@ public class Main {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
         OptimalThreadCountFinder.DPI_SCALING =
-                Point2DCloud.DPI_SCALING = 2; /* Set display scaling */
+                Point2DCloud.DPI_SCALING = 1; /* Set display scaling */
 
-        final Point2DCloud point2DCloud = new Point2DCloud(POINTS /* points */, 1000, 1000, DEBUG);
+        final Point2DCloud point2DCloud = new Point2DCloud(POINTS /* points */, 700, 700, DEBUG);
 
         point2DCloud.addTopButton("GiftWrapping", new Runnable() {
             @Override
