@@ -31,6 +31,7 @@ The quickhull algorithm for computing a convex hull utilizes a divide and conque
 To parellize this algorithm we made the searching much more parallelized for each point. Additinally, added concurrency for each of the subsets and therefore signifcantly reduced calculations. Each subset produced k + 1 subsets which ultimately benifited from being parallelized.
 
 ####Graph
+![G]()
 
 ###Gift Wrapping
 ####Algorithm Definition
@@ -54,9 +55,9 @@ The gift wrapping algorithm, also known as Jarvis march, is an algorithm defined
 To parallelize this algorithm, we utilized the `t` threads in two distinct ways. First, an `n` number of threads are given extrema's on the set of points. Extrema's are points on the north, east, south, and west most sides of the set of points. Once we find that are no more points that can be given to these `wrap threads`, we coin the remaining `m` threads as `search threads`. We then run the gift wrapping algorithm with each `wrap thread`. The `search threads` are then allotted to a specific `wrap thread` so as to optimize line 7-9 in the pseudocode in the previous section. The `search threads` terminate when they have completed searching through all of the set of points. The `wrap threads` terminate when they hit a point in their march that has already has been found to exist on the convex hull.
 
 ####Graph
-The performance speed up for the algorithm are show in the graphs below.
+![G]()
 
-###Graham Scan
+###Graham Scan Raw Serial
 ####Algorithm Definition
 The Graham scan is an algorithm very similar to the giftwrapping algorithm except that the points are sorted in polar order with relation to the lowest and farthest left point. This way as we iterate through points creating edges that create right turns, we do not need to visit every point. Graham Scan, as the name implies, scans points starting from the point that creates the most obtuse angle with the origin point. The runtime is O(nlogn) because of the sorting algorithms needed.
 
@@ -96,11 +97,20 @@ for i = 2 to N:
     M += 1
     swap points[M] with points[i]
 ```
+####Graph
+![G]()
+
+###Graham Scan Force Parallelized
 
 ####Parallelizing Steps
 The Graham scan algorithm uses parallel HeavySort in order to optimize the sorting. Additional improvemets were made in the searching by breaking down the work into multiple threads. Unfortunately, the increased dependency between points on the convex hull made it virtually impossible to parallize even furthur. The biggest drawback with Graham scan is simply its depedency for loop.
 
 ####Graph
+![G]()
+
+###Additional Experiments
+- Optimal Thread Finder: Wrote a class to find the optimal threads to use for searching
+- 3D QuickHull: Unable to finish
 
 ***All code was written and tested by Kapil Gowru, Mathew Kurian, and Ankit Tandon***
 ***Only one external class was used - HeavySort.java**
