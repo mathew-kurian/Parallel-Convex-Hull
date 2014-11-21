@@ -1,8 +1,5 @@
-[TOC]
-
 #Parallel Convex Hull Term Project
 A EE379K (Multicore Computing) term project written by *Kapil Gowru, Mathew Kurian, and Ankit Tandon*. The project tackles the objective of parallelizing three convex hull algorithms: Quickhull, Gift Wrapping, and Graham Scan.
-
 
 ##GUI Instructions
 When the project is run from `main()` you will see a GUI pop up with a blank space and options on the right. The options are listed below:
@@ -29,13 +26,13 @@ The quickhull algorithm for computing a convex hull utilizes a divide and conque
     4. The points found inside this triangle are inherently not part of the convex hull, so they should be removed from the point set and ignored in the succeeding steps.
     5. Repeat steps 3 and 4 on the two lines found in step 3 when forming a triangle.
     6. Continue till all points have been removed, the resulting points constitute the convex hull
+    
 ####Parallelizing Steps
 To parellize this algorithm we made the searching much more parallelized for each point. Additinally, added concurrency for each of the subsets and therefore signifcantly reduced calculations. Each subset produced k + 1 subsets which ultimately benifited from being parallelized.
 
 ####Graph
 
 ###Gift Wrapping
-
 ####Algorithm Definition
 The gift wrapping algorithm, also known as Jarvis march, is an algorithm defined by an O(nh) run time where n is the number of points and h is the number of points on the convex hull. The gift wrapping algorithm starts with a point, `p`,  on the extrema of the set of points that is inherently on the convex hull. It then marches through the set of points to find the next point, q, that is most counterclockwise to `p`. Once `q` is found, `p` is set to `q` and proceeds to march through the points for the most counterclockwise. This continues till `p` reaches the origin of the convex hull or p[0]. The pseudo code taken from [wikipedia](http://en.wikipedia.org/wiki/Gift_wrapping_algorithm) is shown below:
 
@@ -60,7 +57,6 @@ To parallelize this algorithm, we utilized the `t` threads in two distinct ways.
 The performance speed up for the algorithm are show in the graphs below.
 
 ###Graham Scan
-
 ####Algorithm Definition
 The Graham scan is an algorithm very similar to the giftwrapping algorithm except that the points are sorted in polar order with relation to the lowest and farthest left point. This way as we iterate through points creating edges that create right turns, we do not need to visit every point. Graham Scan, as the name implies, scans points starting from the point that creates the most obtuse angle with the origin point. The runtime is O(nlogn) because of the sorting algorithms needed.
 
@@ -101,12 +97,10 @@ for i = 2 to N:
     swap points[M] with points[i]
 ```
 
-
-####Algorithm Definition
-
 ####Parallelizing Steps
+The Graham scan algorithm uses parallel HeavySort in order to optimize the sorting. Additional improvemets were made in the searching by breaking down the work into multiple threads. Unfortunately, the increased dependency between points on the convex hull made it virtually impossible to parallize even furthur. The biggest drawback with Graham scan is simply its depedency for loop.
 
 ####Graph
 
 ***All code was written and tested by Kapil Gowru, Mathew Kurian, and Ankit Tandon***
-***Only one external library was used - HeavySort.java**
+***Only one external class was used - HeavySort.java**
