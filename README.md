@@ -13,13 +13,11 @@ When the project is run from `main()` you will see a GUI pop up with a blank spa
 - Start Button: Starts the algorithm with options defined above.
 - Populate Button: Populates the set of points on the area.
 
-
 ##Convex Hull
 A convex hull is defined by wikipedia as an
 >"envelope of a set X of points in the Euclidean plane or Euclidean space that holds the smallest convex set that contains X. For instance, when is X is a bounded subset of the plane, the convex hull may be visualized as the shape formed by a rubber band stretched around X."
 
 Our objective was to take the following serial convex hull algorithms and parrallelize them so as to utilize multiple threads. Once that was done we compared the performance with various number of threads to test the optimization resulting from parallelizing the algorithms. The sections below offer a brief description of the algorithm, the steps taken to parallelize it,  and the resulting performance benefits.
-
 
 ###QuickHull
 ####Algorithm Definition
@@ -32,9 +30,9 @@ The quickhull algorithm for computing a convex hull utilizes a divide and conque
     5. Repeat steps 3 and 4 on the two lines found in step 3 when forming a triangle.
     6. Continue till all points have been removed, the resulting points constitute the convex hull
 ####Parallelizing Steps
-To parellize this algorithm we
-####Performance Optimization
+To parellize this algorithm we made the searching much more parallelized for each point. Additinally, added concurrency for each of the subsets and therefore signifcantly reduced calculations. Each subset produced k + 1 subsets which ultimately benifited from being parallelized.
 
+####Graph
 
 ###Gift Wrapping
 
@@ -58,7 +56,7 @@ The gift wrapping algorithm, also known as Jarvis march, is an algorithm defined
 ####Parallelizing Steps
 To parallelize this algorithm, we utilized the `t` threads in two distinct ways. First, an `n` number of threads are given extrema's on the set of points. Extrema's are points on the north, east, south, and west most sides of the set of points. Once we find that are no more points that can be given to these `wrap threads`, we coin the remaining `m` threads as `search threads`. We then run the gift wrapping algorithm with each `wrap thread`. The `search threads` are then allotted to a specific `wrap thread` so as to optimize line 7-9 in the pseudocode in the previous section. The `search threads` terminate when they have completed searching through all of the set of points. The `wrap threads` terminate when they hit a point in their march that has already has been found to exist on the convex hull.
 
-####Performance Optimization
+####Graph
 The performance speed up for the algorithm are show in the graphs below.
 
 ###Graham Scan
@@ -108,10 +106,7 @@ for i = 2 to N:
 
 ####Parallelizing Steps
 
-####Performance Optimization
-
-
-
-
+####Graph
 
 ***All code was written and tested by Kapil Gowru, Mathew Kurian, and Ankit Tandon***
+***Only one external library was used - HeavySort.java**
