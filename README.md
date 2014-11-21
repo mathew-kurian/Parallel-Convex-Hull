@@ -1,5 +1,5 @@
 #Parallel Convex Hull Term Project
-A EE379K (Multicore Computing) term project written by *Kapil Gowru, Mathew Kurian, and Ankit Tandon*. The project tackles the objective of parallelizing three convex hull algorithms: Quickhull, Gift Wrapping, and Graham Scan.
+A EE379K (Multicore Computing) term project written by *Kapil Gowru ([@kgowru](github.com/kgowru)), Mathew Kurian ([@bluejamesbond](github.com/bluejamesbond)), and Ankit Tandon ([@ankittandon](github.com/ankittandon))*. The project tackles the objective of parallelizing three convex hull algorithms: Quickhull, Gift Wrapping, and Graham Scan.
 
 ##*License*
 *All source code (except HeavySort) - Copyright Kapil Gowru, Mathew Kurian, and Ankit Tandon*  
