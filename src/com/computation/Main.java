@@ -5,6 +5,7 @@ import com.computation.algo.GrahamScan;
 import com.computation.algo.GrahamScanParallel;
 import com.computation.algo.QuickHull;
 import com.computation.common.Point2DCloud;
+import com.computation.common.Utils;
 import com.computation.experimental.OptimalThreadCountFinder;
 
 import javax.swing.*;
@@ -12,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
-    public final static int POINTS = 1000;
+    public final static int POINTS = 100;
     public final static boolean DEBUG = true;
 
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException,
@@ -21,9 +22,11 @@ public class Main {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
         OptimalThreadCountFinder.DPI_SCALING =
-                Point2DCloud.DPI_SCALING = 1; /* Set display scaling */
+                Point2DCloud.DPI_SCALING = 2; /* Set display scaling */
 
-        final Point2DCloud point2DCloud = new Point2DCloud(POINTS /* points */, 700, 700, DEBUG);
+        final Point2DCloud point2DCloud = new Point2DCloud(POINTS /* points */,
+                Utils.WIDTH = 700,
+                Utils.HEIGHT = 700, DEBUG);
 
         point2DCloud.addTopButton("GiftWrapping", new Runnable() {
             @Override

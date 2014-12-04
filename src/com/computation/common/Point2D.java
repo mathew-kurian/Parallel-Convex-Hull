@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Point2D extends java.awt.Point {
 
-    public static final Color VISITED = Color.GREEN;
-    public static final Color UNVISITED = Color.WHITE;
+    public static final Color VISITED = new Color(0x2ecc71);
+    public static final Color UNVISITED = new Color(0xe74c3c);
 
     private volatile Color color = UNVISITED;
 

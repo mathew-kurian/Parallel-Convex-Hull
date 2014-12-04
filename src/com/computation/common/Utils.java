@@ -7,6 +7,9 @@ import java.util.Random;
 
 public class Utils {
 
+    public static int HEIGHT = 500;
+    public static int WIDTH = 500;
+
     public static List<Point2D> generateRandomPoints(int length, int width, int height, int inset) {
         Random rand = new Random();
         List<Point2D> point2Ds = new ArrayList<Point2D>();
@@ -41,11 +44,11 @@ public class Utils {
     }
 
     public static double rotateY(Point2D point2D, double rads) {
-        return -Math.sin(rads) * point2D.x + Math.cos(rads) * point2D.y;
+        return -Math.sin(rads) * (point2D.x - WIDTH / 2) + Math.cos(rads) * (point2D.y - HEIGHT / 2);
     }
 
     public static double rotateX(Point2D point2D, double rads) {
-        return Math.cos(rads) * point2D.x + Math.sin(rads) * point2D.y;
+        return Math.cos(rads) * (point2D.x - WIDTH / 2) + Math.sin(rads) * (point2D.y - HEIGHT / 2);
     }
 
     public static boolean isPointLeftOf(Point2D line1, Point2D line2, Point2D point2D) {

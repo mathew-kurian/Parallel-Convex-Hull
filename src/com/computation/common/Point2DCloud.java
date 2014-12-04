@@ -47,20 +47,26 @@ public class Point2DCloud {
                     frame = new JFrame();
                     fieldsMap = new HashMap<String, Integer>();
                     polygon = new HashSet<Edge>();
-                    point2Ds = Utils.generateRandomPoints(count, width, height, 50);
+                    point2Ds = Utils.generateRandomPoints(count, width, height, 8);
                     props = new JTable(model);
+
+                    topButtons.setBorder(null);
 
                     buttonsMap = new HashMap<String, JButton>();
                     buttons.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+                    FlowLayout fl = new FlowLayout(FlowLayout.LEFT);
+                    fl.setHgap(0);
+                    fl.setVgap(0);
+
                     topButtonsMap = new HashMap<String, JButton>();
-                    topButtons.setLayout(new FlowLayout(FlowLayout.LEFT));
+                    topButtons.setLayout(fl);
 
                     model.addColumn("Property");
                     model.addColumn("Value");
 
                     panel.setPreferredSize(new Dimension(width, height));
-                    panel.setSize(width, height);
+                    panel.setBorder(null);
 
                     props.setRowHeight(25 * DPI_SCALING);
                     props.setFocusable(false);
@@ -262,6 +268,8 @@ public class Point2DCloud {
         });
     }
 
+    private Color GRID_COLOR = new Color(0x24495e);
+
     private class PointPanel extends JPanel {
 
         protected void paintGrid(Graphics2D g2d) {
@@ -270,7 +278,7 @@ public class Point2DCloud {
             int width = getWidth();
 
             g2d.setStroke(new BasicStroke(DPI_SCALING));
-            g2d.setColor(new Color(0x222222));
+            g2d.setColor(GRID_COLOR);
 
             for (int i = GRID_SPACING; i < height; i += GRID_SPACING) {
                 g2d.drawLine(0, i, width, i);
@@ -281,9 +289,11 @@ public class Point2DCloud {
             }
         }
 
+        private Color BACKGROUND_COLOR = new Color(0x1c3e50);
+
         protected void paintClear(Graphics2D g2d) {
-            g2d.setColor(Color.BLACK);
-            g2d.setBackground(Color.BLACK);
+            g2d.setColor(BACKGROUND_COLOR);
+            g2d.setBackground(BACKGROUND_COLOR);
             g2d.fillRect(0, 0, getWidth(), getHeight());
         }
 
